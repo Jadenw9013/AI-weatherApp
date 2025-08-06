@@ -1,0 +1,34 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "AI-powered Weather App",
+  "scripts": {
+    "prebuild": "node generate-config.js",
+    "build": "echo 'no-op build for static site'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jadenw9013/AI-weatherApp.git"
+  },
+  "keywords": [
+    "weather",
+    "openai",
+    "javascript",
+    "static",
+    "html",
+    "css"
+  ],
+  "author": "Jaden Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jadenw9013/AI-weatherApp/issues"
+  },
+  "homepage": "https://github.com/Jadenw9013/AI-weatherApp#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
