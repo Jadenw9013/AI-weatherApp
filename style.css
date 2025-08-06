@@ -1,0 +1,114 @@
+/* 1. Full-screen gradient + flex center */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #74ABE2 0%, #5563DE 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 2. Card */
+.weather-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+/* 3. Title */
+.weather-container h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+/* 4. Input + button */
+input, button {
+  width: 80%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: #5563DE;
+  box-shadow: 0 0 0 2px rgba(85,99,222,0.2);
+}
+
+button {
+  background: #5563DE;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3f4bb5;
+}
+
+/* 5. Spinner */
+.spinner {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  width: 24px; height: 24px;
+  border: 3px solid #eee;
+  border-top: 3px solid #5563DE;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 6. Results & AI suggestion */
+#weatherResult p {
+  margin: 0.5rem 0;
+}
+.ai-suggestion {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+
+/* AI persona bubble */
+.ai-persona {
+  display: flex;
+  align-items: flex-start;
+  background: #e6f0ff;           /* light blue bubble */
+  border: 1px solid #cce0ff;     /* slightly darker border */
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Simple emoji avatar (or swap for an <img>) */
+.ai-avatar {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+  line-height: 1;
+}
+
+/* Container for text */
+.ai-content {
+  flex: 1;
+}
+
+/* Bot label “WeatherBot:” */
+.ai-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3366cc;
+}
